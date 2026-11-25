@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lars Eriks ROON-musikksamling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lars Eriks ROON-musikksamling</h1>
+    <!-- Statistikken fylles inn av script.js -->
+    <p id="statistikk"></p>
+  </header>
+
+  <main>
+    <!-- Felt for å legge til ny musikk -->
+    <form id="nyttAlbum">
+      <input id="nyArtist" placeholder="Artist" required>
+      <input id="nyTittel" placeholder="Albumtittel" required>
+      <input id="nyttAar" type="number" placeholder="År">
+      <button type="submit">Legg til</button>
+    </form>
+
+    <!-- Søkefelt -->
+    <div class="verktoy">
+      <input id="sok" type="search" placeholder="Søk etter artist eller album …">
+      <select id="filter">
+        <option value="alle">Alle album</option>
+        <option value="hort">Hørt</option>
+        <option value="ikkeHort">Ikke hørt</option>
+      </select>
+      <select id="sortering">
+        <option value="artist">Artist A–Å</option>
+        <option value="tittel">Albumtittel A–Å</option>
+        <option value="aar">Nyeste først</option>
+        <option value="hort">Mest hørt</option>
+        <option value="stjerner">Flest stjerner</option>
+      </select>
+    </div>
+
+    <p id="antall"></p>
+    <ul id="albumliste"></ul>
+    <button id="visFlere">Vis flere</button>
+
+    <button id="slettAlle" class="fare">Slett alle album</button>
+  </main>
+
+  <script src="albums.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

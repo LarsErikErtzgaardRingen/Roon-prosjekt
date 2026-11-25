@@ -1,0 +1,141 @@
+/* Enkelt mørkt tema, inspirert av Roons eget design */
+
+body {
+  margin: 0;
+  background: #16161a;
+  color: #f1f1f4;
+  font-family: system-ui, sans-serif;
+}
+
+header, main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header {
+  padding-top: 24px;
+}
+
+h1 {
+  margin-bottom: 4px;
+  font-weight: 300;
+}
+
+#statistikk, #antall {
+  color: #9a9aa6;
+}
+
+input, select, textarea, button {
+  font: inherit;
+  color: inherit;
+  background: #212127;
+  border: 1px solid #33333c;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+button {
+  cursor: pointer;
+  background: #8b7cf6;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+form, .verktoy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+form input, #sok {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* ---------- Albumlista ---------- */
+
+#albumliste {
+  list-style: none;
+  padding: 0;
+}
+
+.album {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px 16px;
+  padding: 16px;
+  margin-bottom: 10px;
+  background: #212127;
+  border-radius: 10px;
+}
+
+.info strong {
+  display: block;
+  font-size: 17px;
+}
+
+.info span {
+  color: #9a9aa6;
+}
+
+.hort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stjerne {
+  background: none;
+  color: #4a4a55;
+  font-size: 22px;
+  padding: 0 2px;
+}
+
+.stjerne.fylt {
+  color: #f5c451;
+}
+
+textarea {
+  grid-column: 1 / -1;
+  background: #16161a;
+  resize: vertical;
+}
+
+.angre {
+  background: #33333c;
+  font-size: 13px;
+  padding: 4px 10px;
+}
+
+.slett {
+  justify-self: end;
+  background: #33333c;
+  font-size: 13px;
+}
+
+.fare {
+  background: #ef5b6b;
+}
+
+#visFlere, #slettAlle {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Mobil: alt under hverandre */
+@media (max-width: 600px) {
+  .album {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skjul «Vis flere» når JavaScript setter hidden */
+#visFlere[hidden] {
+  display: none;
+}
